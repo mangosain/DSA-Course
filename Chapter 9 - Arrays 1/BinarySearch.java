@@ -1,7 +1,7 @@
 public class BinarySearch {
     public static void main(String[] args) {
-        int[] arr = { 1, 3, 5, 7, 9, 11, 13, 15 };
-        int key = 11;
+        int[] arr = { 1, -2, 6, -1, 3 };
+        int key = 3;
         int result = binarySearch(arr, key);
         if (result == -1) {
             System.out.println("Element not found");
