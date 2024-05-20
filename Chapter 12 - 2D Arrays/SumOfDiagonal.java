@@ -8,6 +8,7 @@ public class SumOfDiagonal {
         };
 
         int sum = 0;
+        int sum2  = 0;
 
         for (int i = 0; i < arr.length; i++) {
             for (int j = 0; j < arr[0].length; j++) {
@@ -17,6 +18,12 @@ public class SumOfDiagonal {
             }
         }
 
+        for (int i = 0; i < arr.length; i++) {
+            sum2 += arr[i][i];
+            sum2 += arr[i][arr.length-1-i];
+        }
+
         System.out.println(sum);
+        System.out.println(sum2);
     }
 }
