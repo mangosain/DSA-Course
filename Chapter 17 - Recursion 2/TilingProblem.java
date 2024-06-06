@@ -1,6 +1,6 @@
 class TilingProblem {
     public static void main(String[] args) {
-        System.out.println(tiling(3));
+        System.out.println(tiling(4));
     }
 
     public static int tiling(int n) {
