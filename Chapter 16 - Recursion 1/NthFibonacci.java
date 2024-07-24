@@ -1,6 +1,6 @@
 public class NthFibonacci {
     public static void main(String[] args) {
-        System.out.println(fib(26));
+        System.out.println(fib(25));
     }
 
     public static int fib(int n) {

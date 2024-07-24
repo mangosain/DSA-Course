@@ -1,6 +1,6 @@
-public class Question1 {
+public class StringMergeSort {
     public static void main(String[] args) {
-        String[] arr = { "sun", "earth", "mars", "mercury" };
+        String[] arr = { "banana", "apple", "orange", "grapes", "mango" };
         sort(arr, 0, arr.length - 1);
 
         for (String str : arr) {

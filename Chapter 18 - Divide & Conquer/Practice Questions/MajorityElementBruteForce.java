@@ -1,4 +1,4 @@
-public class Question2BruteForce {
+public class MajorityElementBruteForce {
     public static void main(String[] args) {
         int[] arr = { 2, 2, 1, 1, 1, 2, 2 };
         System.out.println(majorityElement(arr));
