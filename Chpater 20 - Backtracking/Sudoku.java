@@ -21,12 +21,10 @@ public class Sudoku {
     }
 
     public static boolean sudokuSolver(int[][] sudoku, int row, int col) {
-        // base case
         if (row == 9 && col == 0) {
             return true;
         }
 
-        // recursive case
         int nextRow = row, nextCol = col + 1;
         if (nextCol == 9) {
             nextRow = row + 1;
@@ -39,7 +37,7 @@ public class Sudoku {
 
         for (int digit = 1; digit <= 9; digit++) {
             if (isSafe(sudoku, row, col, digit)) {
-                sudoku[row][col] = digit;
+                sudoku[row][col] = 1;
                 if (sudokuSolver(sudoku, nextRow, nextCol)) {
                     return true;
                 }
@@ -51,20 +49,21 @@ public class Sudoku {
     }
 
     public static boolean isSafe(int[][] sudoku, int row, int col, int digit) {
-        for (int j = 0; j < 9; j++) {
-            if (sudoku[row][j] == digit) {
-                return false;
-            }
-        }
-
         for (int i = 0; i < 9; i++) {
             if (sudoku[i][col] == digit) {
                 return false;
             }
         }
 
+        for (int j = 0; j < 9; j++) {
+            if (sudoku[row][j] == digit) {
+                return false;
+            }
+        }
+
         int startRow = (row / 3) * 3;
         int startCol = (col / 3) * 3;
+
         for (int i = startRow; i < startRow + 3; i++) {
             for (int j = startCol; j < startCol + 3; j++) {
                 if (sudoku[i][j] == digit) {
