@@ -25,11 +25,13 @@ public class MajorityElementDnQ {
 
     public static int count(int[] arr, int low, int high, int num) {
         int count = 0;
+
         for (int i = low; i <= high; i++) {
             if (arr[i] == num) {
                 count++;
             }
         }
+
         return count;
     }
 }

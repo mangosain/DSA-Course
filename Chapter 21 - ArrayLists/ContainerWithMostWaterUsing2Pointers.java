@@ -19,7 +19,7 @@ public class ContainerWithMostWaterUsing2Pointers {
         int lp = 0;
         int rp = list.size() - 1;
 
-        while (lp < rp) {
+        while (lp <= rp) {
             int height = Math.min(list.get(lp), list.get(rp));
             int width = rp - lp;
             int currentArea = height * width;
